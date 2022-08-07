@@ -56,19 +56,11 @@ You will see the output on console
 
 ## Output
 
-<img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/cat-card.jpg" width="150"/><br/>
-
-<br>
-<br>
+<img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/cat-card.jpg" width="500"/><br/>
 
 ## Result comparison
 
-<img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/images/result.png" width="150"/><br/>
-
-<br>
-<br>
-
----
+## <img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/images/result.png" width="500"/><br/>
 
 <br>
 
