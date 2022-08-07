@@ -60,7 +60,7 @@ You will see the output on console
 
 ## Result comparison
 
-## <img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/images/result.png" width="500"/><br/>
+## <img src="https://github.com/lahirudilshan/gapstart-harver-refractor-assessment/blob/master/after-refractor/images/result.png" width="780"/><br/>
 
 <br>
 
