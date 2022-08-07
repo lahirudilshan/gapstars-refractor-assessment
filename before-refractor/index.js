@@ -3,6 +3,10 @@ let { join } = require('path');
 let request = require('request');
 let blend = require('@mapbox/blend');
 let argv = require('minimist')(process.argv.slice(2));
+// ADDITIONALLY ADDED CODE
+const { measurePerformance } = require('../after-refractor/utils')
+const { performance } = require('perf_hooks');
+
 let {
     greeting = 'Hello',
     who = 'You',
@@ -20,6 +24,10 @@ let secondReq = {
     url: 'https://cataas.com/cat/says/' + who + '?width=' + width + '&height=' + height + '&color' + color + '&s=' + size,
     encoding: 'binary'
 };
+
+// ADDITIONALLY ADDED CODE
+const startTime = performance.now();
+
 request.get(firstReq, (err, res, firstBody) => {
     if (err) {
         console.log(err);
@@ -45,13 +53,19 @@ request.get(firstReq, (err, res, firstBody) => {
             height: height,
             format: 'jpeg',
         }, (err, data) => {
-            const fileOut = join(process.cwd(), `/cat-card.jpg`);
+            const fileOut = join(process.cwd(), `/before-refractor/cat-card.jpg`);
             writeFile(fileOut, data, 'binary', (err) => {
                 if (err) {
                     console.log(err);
                     return;
                 }
                 console.log("The file was saved!");
+
+                // ADDITIONALLY ADDED CODE
+                const endTime = performance.now();
+                console.log("===========================");
+                console.log(`Execution took: ${measurePerformance({ startTime, endTime })}`);
+                console.log("===========================");
             });
         });
     });
